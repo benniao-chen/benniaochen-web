@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row form-group">
+      <label for="userName">{{'username' | translate}}</label>
+      <input id="userName" type="text" class="form-control" placeholder="Please input username"
+        [(ngModel)]='userName' [(benniaoAutoFocus)]='userNameInput'>    
+  </div>
+  <div class="row form-group">
+    <label for="passWord">{{'password' | translate}}</label>
+    <input id="passWord" type="text" class="form-control" placeholder="Please input password"
+      [(ngModel)]='passWord' [(benniaoAutoFocus)]='passWordInput'>
+  </div>
+  <button (click)='login()' type="button" class="btn btn-primary">Login</button>
+
+  <button type="button" class="btn btn-primary" (click)="download()">Download</button>
+</div>

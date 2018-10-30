@@ -1,0 +1,19 @@
+.header-wrap,
+.menu-wrap,
+.content-wrap {
+    background: red;
+    height: 50px;
+    font-size: 20px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.menu-wrap {
+    background: green;
+    height: 500px;
+}
+
+.content-wrap {
+    background: blue;
+    height: 500px;
+}

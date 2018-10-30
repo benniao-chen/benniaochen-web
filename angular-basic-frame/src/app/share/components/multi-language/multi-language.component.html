@@ -1,0 +1,5 @@
+<div class="language-wrap">
+  <div *ngFor="let language of languageList" (click)='changeLanguage(language.fileName)'>
+    {{language.name}}
+  </div>
+</div>
