@@ -1,0 +1,32 @@
+{
+  "name": "benniaochen-web-server",
+  "version": "1.0.0",
+  "description": "benniaochen.xyz",
+  "scripts": {
+    "start": "pm2 start index.js",
+    "restart": "pm2 restart index.js",
+    "stop": "pm2 stop index.js",
+    "angular-build": "cd angular-basic-frame && npm install && npm run build",
+    "angular-start": "cd angular-basic-frame && npm start",
+    "build": "npm run angular-build && npm install && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benniao-chen/benniaochen-web-server.git"
+  },
+  "keywords": [
+    "benniaochen.xyz",
+    "angular",
+    "node",
+    "server"
+  ],
+  "author": "benniao_chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benniao-chen/benniaochen-web-server/issues"
+  },
+  "homepage": "https://github.com/benniao-chen/benniaochen-web-server#readme",
+  "devDependencies": {
+    "express": "^4.16.4"
+  }
+}
