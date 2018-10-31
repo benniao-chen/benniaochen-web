@@ -6,7 +6,7 @@ pipeline {
         }
     } 
     stages {
-        stage('Build') {
+        stage('BuildAngularApp') {
             steps {
                 sh 'npm run build'
             }
@@ -18,8 +18,13 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm start'
-                sh 'sleep 1'
+                sh './jenkins/deliver.sh'
+            }
+        }
+        stage('Deliver') {
+            steps {
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/kill.sh'
             }
         }
     }
