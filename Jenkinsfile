@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/deliver.sh'
+                sh 'npm start && pm2 logs'
             }
         }
     }
