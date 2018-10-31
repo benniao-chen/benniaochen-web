@@ -6,15 +6,20 @@ pipeline {
         }
     } 
     stages {
-        stage('CheckImage') {
-            steps {
-                sh 'npm -v'
-                sh 'node -v'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'npm run build'
+            }
+        }
+        stage('Install') {
+            steps {
+                sh 'npm install pm2 --global'
+                sh 'npm install'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'npm start'
             }
         }
     }

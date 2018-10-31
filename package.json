@@ -6,9 +6,8 @@
     "start": "pm2 start index.js",
     "restart": "pm2 restart index.js",
     "stop": "pm2 stop index.js",
-    "angular-build": "cd angular-basic-frame && npm install && npm run build",
-    "angular-start": "cd angular-basic-frame && npm start",
-    "build": "npm run angular-build && npm install && npm start"
+    "build": "cd angular-basic-frame && npm install && npm run build",
+    "angular-start": "cd angular-basic-frame && npm start"
   },
   "repository": {
     "type": "git",
