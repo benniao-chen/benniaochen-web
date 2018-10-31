@@ -1,19 +1,15 @@
 pipeline {
     agent {
         docker {
-            image 'node:6-alpine'
+            image 'node:8-alpine'
             args '-p 3000:3000'
         }
     } 
     stages {
-        stage('Update') {
+        stage('CheckImage') {
             steps {
                 sh 'npm -v'
-                sh 'npm install -g npm'
                 sh 'node -v'
-                sh 'sudo npm cache clean -f'
-                sh 'sudo npm install -g n'
-                sh 'sudo n stable'
             }
         }
         stage('Build') {
