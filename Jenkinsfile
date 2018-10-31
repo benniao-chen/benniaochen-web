@@ -11,8 +11,6 @@ pipeline {
                 sh 'curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash - yum install nodejs -y'
             }
         }
-    }
-    stages {
         stage('Build') {
             steps {
                 sh 'npm run build'
