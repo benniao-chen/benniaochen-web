@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "benniaochen.xyz",
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2 start index.js",
     "restart": "pm2 restart index.js",
     "stop": "pm2 stop index.js",
     "build": "cd angular-basic-frame && npm install && npm run build",
