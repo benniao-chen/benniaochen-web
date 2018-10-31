@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm start && pm2 logs'
+                sh 'npm start'
             }
         }
     }
