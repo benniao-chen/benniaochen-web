@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm start & sleep 1'
+                sh 'npm start'
+                sh 'sleep 1'
             }
         }
     }
