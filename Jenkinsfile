@@ -6,9 +6,15 @@ pipeline {
         }
     } 
     stages {
+        stage('UpdateNpm') {
+            steps {
+                sh 'npm install -g npm'
+            }
+        }
         stage('UpdateNode') {
             steps {
-                sh 'curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash - yum install nodejs -y'
+                sh 'npm cache clean -f'
+                sh 'npm install -g n'
             }
         }
         stage('Build') {
