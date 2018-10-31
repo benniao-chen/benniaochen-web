@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('UpdateNpm') {
             steps {
-                sh 'npm install -g npm'
+                sh 'npm -g install npm@next'
             }
         }
         stage('UpdateNode') {
             steps {
-                sh 'npm cache clean -f'
                 sh 'npm install -g n'
+                sh 'n stable'
             }
         }
         stage('Build') {
