@@ -13,13 +13,12 @@ pipeline {
         }
         stage('Install') {
             steps {
-                sh 'npm install pm2 --global'
                 sh 'npm install'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'npm start'
+                sh 'npm start & sleep 1'
             }
         }
     }
