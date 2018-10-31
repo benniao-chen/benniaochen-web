@@ -6,15 +6,13 @@ pipeline {
         }
     } 
     stages {
-        stage('UpdateNpm') {
+        stage('Update') {
             steps {
-                sh 'npm -g install npm@next'
-            }
-        }
-        stage('UpdateNode') {
-            steps {
-                sh 'npm install -g n'
-                sh 'n stable'
+                sh 'npm -v'
+                sh 'node -v'
+                sh 'sudo npm cache clean -f'
+                sh 'sudo npm install -g n'
+                sh 'sudo n stable'
             }
         }
         stage('Build') {
