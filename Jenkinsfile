@@ -9,6 +9,7 @@ pipeline {
         stage('Update') {
             steps {
                 sh 'npm -v'
+                sh 'npm install -g npm'
                 sh 'node -v'
                 sh 'sudo npm cache clean -f'
                 sh 'sudo npm install -g n'
