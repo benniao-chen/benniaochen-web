@@ -13,6 +13,10 @@ export class LoginComponent implements OnInit {
   passWord: string = "";
   userNameInput: boolean = true;
   passWordInput: boolean = false;
+  obj: any = {
+    a: 1,
+    b: 2
+  }
 
   constructor(
     private router: Router,

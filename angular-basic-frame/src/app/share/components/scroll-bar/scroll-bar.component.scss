@@ -1,0 +1,38 @@
+.scroll-bar-container {
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+
+    .y-scroll-container {    
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: block;
+        background-color: transparent;
+        opacity: 0.6;
+        transition: background-color .2s linear, opacity .2s linear;
+        -webkit-transition: background-color .2s linear, opacity .2s linear;
+        width: 15px;
+        .y-scroll {
+            position: absolute;
+            right: 2px;
+            width: 6px;
+            background-color: #aaa;
+            border-radius: 6px;
+            transition: background-color .2s linear, width .2s ease-in-out;
+            -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+            height: 50px;
+        }
+
+        &:hover {
+            background-color: #eee;
+            opacity: 0.9;
+            display: block;
+            .y-scroll {
+                background-color: #999;
+                width: 11px;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<div class="scroll-bar-container" [ngStyle]="styleObj" #scrollContainer>
+  <ng-content></ng-content>
+  <div class="y-scroll-container" [style.top.px]="yScrollContainerTop">
+    <div class="y-scroll" tabindex="0" [style.top.px]="yScrollBarTop" 
+      (mousedown)='mousedown($event)' 
+      (mousemove)='mousemove($event)' 
+      (mouseup)='mouseup($event)' ></div>
+  </div>
+</div>

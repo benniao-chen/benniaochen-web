@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AutoFocusDirective } from './directives/auto-focus.directive';
 /* Components */
 import { MultiLanguageComponent } from './components/multi-language/multi-language.component';
+import { ScrollBarComponent } from './components/scroll-bar/scroll-bar.component';
 /* Services */
 import { GetBlobService } from './services/get-blob.service';
 /* Interceptors */
@@ -22,12 +23,14 @@ import { ResponseInterceptor } from './interceptors/response.interceptor';
   declarations: [
     AutoFocusDirective,
     MultiLanguageComponent,
+    ScrollBarComponent,
   ],
   exports: [
     AutoFocusDirective,
     FormsModule,
     ReactiveFormsModule,
     MultiLanguageComponent,
+    ScrollBarComponent,
   ]
 })
 
